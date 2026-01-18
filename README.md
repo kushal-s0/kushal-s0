@@ -2,7 +2,7 @@
 - 👀 I’m interested in web development, machine learning, and automation.  
 - 🌱 I’m currently learning Django, Flask, Js ,Java and Many more.  
 - 💞️ I’m looking to collaborate on open-source projects and college-related management tools.  
-- 📫 How to reach me: kushal.soni@somaiya.edu  
+- 📫 How to reach me: sonikushal237@gmail.com  
 - 😄 Pronouns: He/Him  
 - ⚡ Fun fact: I love building projects that solve real-world problems!  
 
