@@ -1,0 +1,19 @@
+# Python bytecode / __pycache__
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/ 
+
+# Dependencies
+/lib/
+/python_modules/
+node_modules/
