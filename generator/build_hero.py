@@ -5,7 +5,7 @@ from pathlib import Path
 import base64
 import numpy as np
 import config
-from animation_engine import compute_traveller_routes, generate_fluid_keyframes
+from animation_engine import compute_traveller_routes, generate_fluid_keyframes, extract_logo_points
 from io import BytesIO
 from PIL import Image
 from collections import Counter
@@ -78,13 +78,13 @@ def build_d_string(pts):
         parts.append(f"M{int(x)} {int(y)}h2v2h-2z")
     return "".join(parts)
 
-def run():
+def build_portrait_state(num_hero):
     print("Parsing portrait_svg.svg to extract initial particles and colors...")
     with open(config.PORTRAIT_SVG, "r") as f:
         svg_content = f.read()
 
     paths = re.findall(r'<path fill=\"([^\"]+)\" d=\"([^\"]+)\"', svg_content)
-    
+
     all_dots = []
     for fill, d in paths:
         for cmd in d.split('z'):
@@ -135,9 +135,22 @@ def run():
     hero_dots = [p[0] for p in sorted_pairs]
     hero_pts = np.array([p[1] for p in sorted_pairs])
     
+    return hero_pts, static_paths_str
+
+
+def run():
+    # When SHOW_PORTRAIT is False no portrait asset is read or rendered at all;
+    # hero_pts is sourced from the first logo further down instead.
+    show_portrait = getattr(config, "SHOW_PORTRAIT", True)
+    num_hero = config.PARTICLES["count"]
     buckets = 5
     bucket_size = num_hero // buckets
-    
+    static_paths_str = ""
+    hero_pts = None
+
+    if show_portrait:
+        hero_pts, static_paths_str = build_portrait_state(num_hero)
+
     print("Auto-discovering logos...")
     valid_logos = []
     palettes = [config.PORTRAIT_COLORS] # index 0 is portrait
@@ -158,13 +171,40 @@ def run():
     cx = 40 + 400 / 2
     cy = 85 + 490 / 2
     
-    routes = compute_traveller_routes(hero_pts, valid_logos, target_box, target_box, num_hero)
-    
+    # ---- Face-free mode -------------------------------------------------
+    # When config.SHOW_PORTRAIT is False we never render a person at all:
+    # the first logo becomes the "home" state of the particle cycle, the
+    # photo layer is dropped, and the portrait silhouette dots are dropped.
+    if show_portrait:
+        logo_cycle = valid_logos
+    else:
+        print("SHOW_PORTRAIT is False -> building a logo-only cycle (no portrait).")
+        home_logo = valid_logos[0]
+        logo_cycle = valid_logos[1:]
+        if not logo_cycle:
+            print("Face-free mode needs at least 2 logos in assets/logos/. Exiting.")
+            return
+        # Home state = first logo, in the same 0..target_box space as the others.
+        hero_pts = extract_logo_points(home_logo, target_box, target_box, num_hero)
+        # Rebuild palettes so index 0 is the home logo and index i+1 lines up
+        # with logo_cycle[i] (the timeline below indexes them that way).
+        palettes = [extract_logo_palette(home_logo, buckets)] + [
+            extract_logo_palette(p, buckets) for p in logo_cycle
+        ]
+        # Drop the portrait silhouette dots entirely.
+        static_paths_str = ""
+
+    routes = compute_traveller_routes(hero_pts, logo_cycle, target_box, target_box, num_hero)
+
     if not routes:
         print("Failed to compute routes. Exiting.")
         return
-        
-    for r in routes[1:-1]:
+
+    # In portrait mode routes[0]/routes[-1] are already in absolute canvas
+    # coords, so only the logo frames need offsetting. In face-free mode every
+    # frame is a logo, so all of them do.
+    to_offset = routes[1:-1] if show_portrait else routes
+    for r in to_offset:
         r[:, 0] += cx - target_box/2
         r[:, 1] += cy - target_box/2
         
@@ -205,7 +245,7 @@ def run():
     timeline_hero_op.append((t, 1))
     
     # Logos Iteration
-    for i in range(len(valid_logos)):
+    for i in range(len(logo_cycle)):
         # Transition to Logo i
         start_t = t
         end_t = t + dur["logo_transition"]
@@ -258,6 +298,13 @@ def run():
     timeline_static.append((t, 0))
     timeline_hero_op.append((t, 0))
     
+    if not show_portrait:
+        # No photo and no silhouette ever become visible; the particles are the
+        # only layer, so they stay on for the whole loop.
+        timeline_photo = [(tt, 0) for tt, _ in timeline_photo]
+        timeline_static = [(tt, 0) for tt, _ in timeline_static]
+        timeline_hero_op = [(tt, 1) for tt, _ in timeline_hero_op]
+
     total_dur = t
     print(f"Total animation loop: {total_dur}s")
     
@@ -295,8 +342,15 @@ def run():
     hero_kt, hero_val = format_op(timeline_hero_op)
     
     print("Writing SVG...")
-    photo_b64 = get_base64_image(config.PORTRAIT_PHOTO)
-    
+    if show_portrait:
+        photo_b64 = get_base64_image(config.PORTRAIT_PHOTO)
+        photo_layer = f'''<image x="40" y="85" width="400" height="490" href="data:image/png;base64,{photo_b64}" preserveAspectRatio="xMidYMid slice" filter="url(#photoBlur)">
+        <animate attributeName="opacity" values="{photo_val}" keyTimes="{photo_kt}" dur="{total_dur}s" repeatCount="indefinite" />
+    </image>'''
+    else:
+        # Face-free mode: no photo is embedded in the SVG at all.
+        photo_layer = "<!-- portrait disabled (config.SHOW_PORTRAIT = False) -->"
+
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610">
     <defs>
         <style>
@@ -338,9 +392,7 @@ def run():
     <rect x="40" y="85" width="400" height="490" rx="8" fill="#070B16" stroke="rgba(34,211,238,0.2)" />
 
     <!-- Photo Layer -->
-    <image x="40" y="85" width="400" height="490" href="data:image/png;base64,{photo_b64}" preserveAspectRatio="xMidYMid slice" filter="url(#photoBlur)">
-        <animate attributeName="opacity" values="{photo_val}" keyTimes="{photo_kt}" dur="{total_dur}s" repeatCount="indefinite" />
-    </image>
+    {photo_layer}
 
     <!-- Static Background Dots -->
     <g opacity="0">

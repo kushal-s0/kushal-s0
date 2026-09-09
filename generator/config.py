@@ -13,8 +13,12 @@ BACKGROUND = "#0A101F"
 
 
 # ---------- Assets ----------
-# NOTE: replace assets/portrait_final.png (and assets/portrait_svg.svg)
-# with your own photo before building — these are still the sample images.
+# SHOW_PORTRAIT = False -> no photo and no face silhouette is rendered at all.
+# The particles simply cycle through the tech logos in assets/logos/.
+# Set it to True only if you want a portrait photo in the banner, in which case
+# PORTRAIT_PHOTO and PORTRAIT_SVG below must point at your own images.
+SHOW_PORTRAIT = False
+
 PORTRAIT_PHOTO = ROOT / "assets" / "portrait_final.png"
 PORTRAIT_SVG = ROOT / "assets" / "portrait_svg.svg"
 LOGOS_DIR = ROOT / "assets" / "logos"
