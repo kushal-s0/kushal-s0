@@ -32,7 +32,7 @@
     <circle cx="24" cy="23" r="6" fill="#FF5F56" />
     <circle cx="44" cy="23" r="6" fill="#FFBD2E" />
     <circle cx="64" cy="23" r="6" fill="#27C93F" />
-    <text x="590" y="27" fill="#64748B" font-size="12" text-anchor="middle">kartikverma2204@gmail.com - ./profile.sh --hero</text>
+    <text x="590" y="27" fill="#64748B" font-size="12" text-anchor="middle">teamatomixkardhikush@gmail.com - ./profile.sh --hero</text>
 
     <!-- Left Box (Portrait area) -->
     <text x="40" y="72" class="title" fill="#64748B">VISUAL.MAP</text>
@@ -19431,23 +19431,23 @@
     <text x="500" y="100" class="title">SYSTEM.INFO</text>
     <line x1="590" y1="96" x2="1140" y2="96" stroke="rgba(255,255,255,0.1)" />
     
-    <text x="500" y="140" class="label">Name ........... <tspan class="val">Kartik Verma</tspan></text>
-    <text x="500" y="170" class="label">Role ........... <tspan class="val">Full-Stack Developer</tspan></text>
+    <text x="500" y="140" class="label">Name ........... <tspan class="val">Kushal D. Soni</tspan></text>
+    <text x="500" y="170" class="label">Role ........... <tspan class="val">AI / Full-Stack Developer</tspan></text>
     <text x="500" y="200" class="label">Location ....... <tspan class="val">Mumbai, India</tspan></text>
     <text x="500" y="230" class="label">Education ...... <tspan class="val">B.Tech Computer Engineering (Honors – AIML)</tspan></text>
     
     <text x="500" y="280" class="title">STACK.INFO</text>
     <line x1="590" y1="276" x2="1140" y2="276" stroke="rgba(255,255,255,0.1)" />
     
-    <text x="500" y="320" class="label">Core.Lang ...... <tspan class="val">C · Java · Python · JavaScript</tspan></text>
+    <text x="500" y="320" class="label">Core.Lang ...... <tspan class="val">Python · Java · JavaScript · C · SQL</tspan></text>
     <text x="500" y="350" class="label">Core.Front ..... <tspan class="val">HTML5 · CSS3 · Bootstrap · Tailwind · React.js</tspan></text>
-    <text x="500" y="380" class="label">Core.Back ...... <tspan class="val">Node.js · Express.js · Flask · Django</tspan></text>
-    <text x="500" y="410" class="label">Core.Data ...... <tspan class="val">MySQL · MongoDB · Oracle Database · Supabase</tspan></text>
-    <text x="500" y="440" class="label">Core.Infra ..... <tspan class="val">AWS · Docker · Render · Vercel</tspan></text>
+    <text x="500" y="380" class="label">Core.Back ...... <tspan class="val">Django · Flask · Node.js · Express.js</tspan></text>
+    <text x="500" y="410" class="label">Core.Data ...... <tspan class="val">MySQL · PostgreSQL · MongoDB · SQLite</tspan></text>
+    <text x="500" y="440" class="label">Core.Infra ..... <tspan class="val">AWS · Docker · Vercel · Render · Unity</tspan></text>
     
     <text x="500" y="490" class="title">NETWORK.INFO</text>
     <line x1="600" y1="486" x2="1140" y2="486" stroke="rgba(255,255,255,0.1)" />
     
-    <text x="500" y="530" class="label">Email .......... <tspan class="val">kartikverma2204@gmail.com</tspan></text>
-    <text x="500" y="560" class="label">Portfolio ...... <tspan class="val">kartik-verma.onrender.com/</tspan></text>
+    <text x="500" y="530" class="label">Email .......... <tspan class="val">teamatomixkardhikush@gmail.com</tspan></text>
+    <text x="500" y="560" class="label">Portfolio ...... <tspan class="val">portfolio1-blue-zeta.vercel.app</tspan></text>
 </svg>

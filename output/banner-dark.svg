@@ -35,7 +35,7 @@
     <circle cx="30" cy="25" r="5.5" fill="#FF5F56" />
     <circle cx="50" cy="25" r="5.5" fill="#FFBD2E" />
     <circle cx="70" cy="25" r="5.5" fill="#27C93F" />
-    <text x="590.0" y="29" class="top-bar-text" text-anchor="middle">kartikverma2204@gmail.com - % ./profile.sh --live</text>
+    <text x="590.0" y="29" class="top-bar-text" text-anchor="middle">teamatomixkardhikush@gmail.com - % ./profile.sh --live</text>
 
     <!-- Visual Map Portrait -->
     <text x="38" y="74" class="title" style="fill:#475569; filter:none; font-size:10px; letter-spacing:3px;">VISUAL.MAP</text>
@@ -57,11 +57,11 @@
         <animate attributeName="opacity" values="0;1" dur="1s" begin="0.5s" fill="freeze" />
         
         <text x="500" y="170" class="mono label">Subject ...........</text>
-        <text x="680" y="170" class="mono value" fill="#F8FAFC">Kartik Verma</text>
+        <text x="680" y="170" class="mono value" fill="#F8FAFC">Kushal D. Soni</text>
         
         
         <text x="500" y="195" class="mono label">Role ..............</text>
-        <text x="680" y="195" class="mono value" fill="#F8FAFC">Full-Stack Developer</text>
+        <text x="680" y="195" class="mono value" fill="#F8FAFC">AI / Full-Stack Developer</text>
         
         
         <text x="500" y="220" class="mono label">Origin ............</text>
@@ -86,7 +86,7 @@
         <text x="500" y="335" class="title" style="fill: #22D3EE; filter:none;">-----------</text>
         
         <text x="500" y="360" class="mono label">Core.Lang .........</text>
-        <text x="680" y="360" class="mono value" fill="#F8FAFC">C · Java · Python · JavaScript</text>
+        <text x="680" y="360" class="mono value" fill="#F8FAFC">Python · Java · JavaScript · C · SQL</text>
         
         
         <text x="500" y="385" class="mono label">Core.Frontend .....</text>
@@ -94,15 +94,15 @@
         
         
         <text x="500" y="410" class="mono label">Core.Backend ......</text>
-        <text x="680" y="410" class="mono value" fill="#F8FAFC">Node.js · Express.js · Flask · Django</text>
+        <text x="680" y="410" class="mono value" fill="#F8FAFC">Django · Flask · Node.js · Express.js</text>
         
         
         <text x="500" y="435" class="mono label">Core.Database .....</text>
-        <text x="680" y="435" class="mono value" fill="#F8FAFC">MySQL · MongoDB · Oracle Database · Supabase</text>
+        <text x="680" y="435" class="mono value" fill="#F8FAFC">MySQL · PostgreSQL · MongoDB · SQLite</text>
         
         
         <text x="500" y="460" class="mono label">Core.Infra ........</text>
-        <text x="680" y="460" class="mono value" fill="#F8FAFC">AWS · Docker · Render · Vercel</text>
+        <text x="680" y="460" class="mono value" fill="#F8FAFC">AWS · Docker · Vercel · Render · Unity</text>
         
     </g>
 
@@ -111,11 +111,11 @@
         <text x="500" y="500" class="mono" style="fill: #94A3B8; font-size: 13px;">- Contact -</text>
         
         <text x="500" y="530" class="mono label">Grid.Mail .........</text>
-        <text x="680" y="530" class="mono value" fill="#F8FAFC">kartikverma2204@gmail.com</text>
+        <text x="680" y="530" class="mono value" fill="#F8FAFC">teamatomixkardhikush@gmail.com</text>
         
         
         <text x="500" y="555" class="mono label">Grid.Portfolio ....</text>
-        <text x="680" y="555" class="mono value" fill="#F8FAFC">kartik-verma.onrender.com/</text>
+        <text x="680" y="555" class="mono value" fill="#F8FAFC">portfolio1-blue-zeta.vercel.app</text>
         
         
         <text x="500" y="580" class="mono label">Grid.LinkedIn .....</text>

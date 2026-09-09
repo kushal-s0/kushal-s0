@@ -31,9 +31,9 @@ DATABASE = "MySQL · PostgreSQL · MongoDB · SQLite"
 INFRA = "AWS · Docker · Vercel · Render · Unity"
 
 # ---------- Social ----------
-LINKEDIN = "https://www.linkedin.com/in/REPLACE-LINKEDIN/"
+LINKEDIN = "https://www.linkedin.com/in/kushaldsoni/"
 EMAIL = "teamatomixkardhikush@gmail.com"
-PORTFOLIO = "https://REPLACE-PORTFOLIO"
+PORTFOLIO = "https://portfolio1-blue-zeta.vercel.app/"
 
 # ---------- Animation Timeline (in seconds) ----------
 TIMING = {
