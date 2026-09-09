@@ -36,7 +36,7 @@ INFRA = "AWS · Docker · Vercel · Render · Unity"
 
 # ---------- Social ----------
 LINKEDIN = "https://www.linkedin.com/in/kushaldsoni/"
-EMAIL = "teamatomixkardhikush@gmail.com"
+EMAIL = "sonikushal237@gmail.com"
 PORTFOLIO = "https://portfolio1-blue-zeta.vercel.app/"
 
 # ---------- Animation Timeline (in seconds) ----------

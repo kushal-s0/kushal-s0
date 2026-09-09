@@ -140,13 +140,18 @@ cd generator && python build_hero.py
 
 ---
 
-## Remaining placeholders
+## Project links
 
-Four project links in `README.md` still need real URLs — search for `«REPLACE-`:
+All four are filled in. Two of them live on collaborators' accounts:
 
-| Line | Project |
-|:---|:---|
-| ~226 | CommUnity |
-| ~245 | GeoSwipe |
-| ~265 | Atomix |
-| ~281 | AI-Based Internship Recommendation System |
+| Project | Repository | Owner |
+|:---|:---|:---|
+| CommUnity | `kushal-s0/CommUnity` | you |
+| AI-Based Internship Recommendation Engine | `kushal-s0/AI-Based_Internship_Recommendation_Engine` | you |
+| Atomix | `Dhir-learner/Atomix` | teammate |
+| GeoSwipe | `Interior-Gardener/Geoswipe` | teammate |
+
+That's fine for team projects — the links go to the canonical repo. Just note
+that commits in those two don't count toward *your* contribution graph or the
+"Top Languages" card unless your commits are attributed to your GitHub account
+(check that the email on those commits is registered in your GitHub settings).

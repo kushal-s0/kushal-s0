@@ -1,8 +1,8 @@
 <!--
 ════════════════════════════════════════════════════════════════
   Profile README — Kushal D. Soni  (github.com/kushal-s0)
-  All links are LIVE. The only remaining placeholders are the 4
-  project links: search for  «REPLACE-
+  All links are live. Stats/snake cards need the Actions workflow
+  to run once — see SETUP.md.
 ════════════════════════════════════════════════════════════════
 -->
 
@@ -219,7 +219,7 @@ Replaces the paperwork trail behind every college event. A committee raises an e
 - **AI-powered document generation** for post-event reports
 - **Google Calendar API** integration for scheduling
 
-🔗 [View Project](https://«REPLACE-COMMUNITY-LINK»)
+🔗 [View Project](https://github.com/kushal-s0/CommUnity)
 
 </td>
 <td width="50%" valign="top">
@@ -238,7 +238,7 @@ Explore the planet **without touching a mouse** — a fully interactive 3D Earth
 
 🥈 *2nd Prize — Somaiya AI-Robo Festival 2026* · 🎤 *CIIA Showcase*
 
-🔗 [View Project](https://«REPLACE-GEOSWIPE-LINK»)
+🔗 [View Project](https://github.com/Interior-Gardener/Geoswipe)
 
 </td>
 </tr>
@@ -258,7 +258,7 @@ A **Unity-based 3D virtual chemistry lab** where students run experiments that w
 
 🥇 *Winner — IET InTech 2K26 (National Level)*
 
-🔗 [View Project](https://«REPLACE-ATOMIX-LINK»)
+🔗 [View Project](https://github.com/Dhir-learner/Atomix)
 
 </td>
 <td width="50%" valign="top">
@@ -274,7 +274,7 @@ Matches students to internships using **similarity scoring** rather than keyword
 - Similarity-based recommendation engine
 - Database-backed web application for matching & data management
 
-🔗 [View Project](https://«REPLACE-INTERNSHIP-LINK»)
+🔗 [View Project](https://github.com/kushal-s0/AI-Based_Internship_Recommendation_Engine)
 
 </td>
 </tr>
