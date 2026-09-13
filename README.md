@@ -24,7 +24,7 @@
  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
 &nbsp;
-<a href="mailto:teamatomixkardhikush@gmail.com">
+<a href="mailto:sonikushal237@gmail.com">
  <img src="https://img.shields.io/badge/Email-0A101F?style=for-the-badge&logo=gmail&logoColor=10B981&labelColor=0A101F" alt="Email" />
 </a>
 &nbsp;
@@ -406,7 +406,7 @@ Matches students to internships using **similarity scoring** rather than keyword
  <img src="https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect" />
 </a>
 &nbsp;
-<a href="mailto:teamatomixkardhikush@gmail.com">
+<a href="mailto:sonikushal237@gmail.com">
  <img src="https://img.shields.io/badge/Say_Hello-0A101F?style=for-the-badge&logo=gmail&logoColor=10B981&labelColor=0A101F" alt="Email" />
 </a>
 &nbsp;
