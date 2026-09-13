@@ -155,3 +155,25 @@ That's fine for team projects — the links go to the canonical repo. Just note
 that commits in those two don't count toward *your* contribution graph or the
 "Top Languages" card unless your commits are attributed to your GitHub account
 (check that the email on those commits is registered in your GitHub settings).
+
+---
+
+## Rebuilding the README cards
+
+Section headers, highlight stats, the `about.yaml` terminal, project covers,
+the journey timeline and the philosophy/dev tiles are animated SVGs in
+`assets/readme/`. They are generated — edit the data at the top of each
+section in `generator/build_readme_cards.py`, then:
+
+```bash
+cd generator
+python build_readme_cards.py
+```
+
+It only needs the Python standard library. Commit the updated SVGs.
+
+To preview one as a PNG (animations are not rendered, only the final frame):
+
+```bash
+node svg2png.js ../assets/readme/journey.svg journey.png
+```

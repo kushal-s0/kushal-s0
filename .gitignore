@@ -17,3 +17,6 @@ venv.bak/
 /lib/
 /python_modules/
 node_modules/
+
+# Local secrets — never commit
+token.txt
