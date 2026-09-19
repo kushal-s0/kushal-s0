@@ -28,7 +28,7 @@
  <img src="https://img.shields.io/badge/Email-0A101F?style=for-the-badge&logo=gmail&logoColor=10B981&labelColor=0A101F" alt="Email" />
 </a>
 &nbsp;
-<a href="https://portfolio1-blue-zeta.vercel.app/">
+<a href="https://kushal-portfolio-lime.vercel.app/">
  <img src="https://img.shields.io/badge/Portfolio-0A101F?style=for-the-badge&logo=vercel&logoColor=10B981&labelColor=0A101F" alt="Portfolio" />
 </a>
 &nbsp;
@@ -410,7 +410,7 @@ Matches students to internships using **similarity scoring** rather than keyword
  <img src="https://img.shields.io/badge/Say_Hello-0A101F?style=for-the-badge&logo=gmail&logoColor=10B981&labelColor=0A101F" alt="Email" />
 </a>
 &nbsp;
-<a href="https://portfolio1-blue-zeta.vercel.app/">
+<a href="https://kushal-portfolio-lime.vercel.app/">
  <img src="https://img.shields.io/badge/Visit_Portfolio-0A101F?style=for-the-badge&logo=vercel&logoColor=22D3EE&labelColor=0A101F" alt="Portfolio" />
 </a>
 
